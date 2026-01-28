@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Automation Agent</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .action-box {
+      margin-bottom: 8px;
+    }
+    button {
+      margin-top: 5px;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Create Routine</h1>
+
+  <div class="box">
+    <label>Routine Name</label><br>
+    <input id="routineName" /><br><br>
+
+    <label>Time</label><br>
+    <input type="time" id="routineTime" /><br><br>
+
+    <label>Days</label><br>
+    <div id="daySelector">
+      <label><input type="checkbox" value="Mon"> Mon</label>
+      <label><input type="checkbox" value="Tue"> Tue</label>
+      <label><input type="checkbox" value="Wed"> Wed</label>
+      <label><input type="checkbox" value="Thu"> Thu</label>
+      <label><input type="checkbox" value="Fri"> Fri</label>
+      <label><input type="checkbox" value="Sat"> Sat</label>
+      <label><input type="checkbox" value="Sun"> Sun</label>
+    </div>
+  </div>
+
+  <h2>Actions</h2>
+  <div id="actions"></div>
+
+  <button id="addAction">+ Add Action</button><br><br>
+  <button id="saveRoutine">Save Routine</button>
+
+  <hr>
+
+  <h1>Routines</h1>
+  <div id="routines"></div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
